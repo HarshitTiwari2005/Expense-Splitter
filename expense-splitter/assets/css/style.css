@@ -1,0 +1,61 @@
+/* Base */
+:root{
+  --primary-1:#6a11cb;
+  --primary-2:#2575fc;
+  --bg:#0e1217;
+}
+*{ box-sizing:border-box; }
+body{ font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji'; background:#f5f7fb; }
+
+/* Gradient nav + hero */
+.bg-gradient-primary{
+  background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+}
+.hero{
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.15), transparent), 
+              linear-gradient(135deg, var(--primary-1), var(--primary-2));
+}
+.footer{
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color:#cbd5e1;
+}
+
+/* Cards, buttons, badges */
+.card{ border:0; border-radius: 18px; box-shadow: 0 10px 30px rgba(16,24,40,.06); }
+.btn-primary, .btn-success, .btn-warning{
+  border-radius:12px;
+}
+.badge-soft{
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  color:#111827;
+  background:#eef2ff;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+}
+.badge-pastel{
+  border-radius:999px;
+  padding:.35rem .7rem;
+  color:#111827;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+}
+.badge-pastel::before{
+  content:"";
+  display:inline-block;
+  width:.65rem;height:.65rem;border-radius:50%;
+  background: currentColor;
+}
+
+/* Tables */
+.table>thead th{ background:#f8fafc; }
+.table{ border-radius:12px; overflow:hidden; }
+.table td, .table th{ vertical-align: middle; }
+
+/* Animations */
+.fade-rise{ animation: fade-rise .6s ease both; }
+@keyframes fade-rise{
+  from{ opacity:0; transform: translateY(8px); }
+  to{ opacity:1; transform: translateY(0); }
+}
